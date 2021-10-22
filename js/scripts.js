@@ -13,12 +13,19 @@ function updateQuestion() {
 function logAnswer() {
   let target = ((counter-1)%3)+1;
   if (target===1){
-    optionA+=$("input:radio[name=userInput]:checked").val();
+    optionA+=parseInt($("input:radio[name=userInput]:checked").val());
   }else if (target===2){
-    optionB+=$("input:radio[name=userInput]:checked").val();
+    optionB+=parseInt($("input:radio[name=userInput]:checked").val());
   }else{
-    optionC+=$("input:radio[name=userInput]:checked").val();
+    optionC+=parseInt($("input:radio[name=userInput]:checked").val());
   }
+  console.log(target + " target");
+  console.log(target===1 + " 1 true");
+  console.log(target===2 + " 2 true");
+  console.log(target===3 + " 3 true");
+  console.log(optionA + " A");
+  console.log(optionB + " B");
+  console.log(optionC + " C");
 }
 function results(){
   if (optionA>optionB&&optionB>=optionC){
