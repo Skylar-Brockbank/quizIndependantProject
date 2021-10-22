@@ -10,10 +10,6 @@ body {
   background-color: var(--bgPurple);
 }
 
-.hidden {
-  display: none;
-}
-
 .titleCard {
   display: grid;
   width: 80%;
@@ -52,7 +48,7 @@ body {
 .bubbles {
   width: 80%;
   margin: 0 auto;
-  display:flexbox;
+  display:grid;
 }
 .bubbles form {
   display: grid;
@@ -101,5 +97,10 @@ body {
   color:var(--offBlack)
 }
 #nextButton {
+  margin-top:3em;
   justify-self: end;
+}
+
+.hidden {
+  display: none;
 }
