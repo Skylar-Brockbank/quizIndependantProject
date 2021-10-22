@@ -8,24 +8,24 @@ const questions = ["♫ you like pina coladas ♫", "♫ you enjoy getting caugh
 function updateQuestion() {
   counter += 1;
   $("#questionContent").text(questions[counter-1]);
-  
+  $("#default").prop("checked",true);
 }
 function logAnswer() {
   test = parseInt(((counter-1)%3)+1);
-  if (test==1){
+  if (test===1){
     optionA += parseInt($("input:radio[name=userInput]:checked").val());
+    console.log("I ran")
   }else if (test===2){
     optionB += parseInt($("input:radio[name=userInput]:checked").val());
   }else{
     optionC += parseInt($("input:radio[name=userInput]:checked").val());
   }
-  console.log(target);
-  console.log(test == 1);
+  console.log(test===1);
   console.log(test===2);
   console.log(test===3);
-  console.log(optionA + " A");
-  console.log(optionB + " B");
-  console.log(optionC + " C");
+  console.log(optionA);
+  console.log(optionB);
+  console.log(optionC);
 }
 function results(){
   if (optionA>optionB&&optionB>=optionC){
@@ -44,8 +44,6 @@ $(document).ready(function(){
     updateQuestion();
   });
   $("#nextButton").click(function(){
-    $("#default").prop("checked",true);
-    //verified this counter works
     if (counter > (questions.length-1)){
       $(".questionCard").addClass("hidden");
       $("#answer").text(results());
