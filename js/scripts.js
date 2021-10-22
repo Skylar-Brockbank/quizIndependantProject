@@ -3,8 +3,8 @@ optionB=0;
 optionC=0;
 counter=0;
 target=0;
-const outcome = ["Result A","Result B","Result C"];
-const outcomeDescription = ["description A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, alias illo dolorem suscipit excepturi a velit vel blanditiis dicta voluptas!","description B Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, alias illo dolorem suscipit excepturi a velit vel blanditiis dicta voluptas!","description C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, alias illo dolorem suscipit excepturi a velit vel blanditiis dicta voluptas!"];
+const outcome = ["Lua","Assembly","Python"];
+const outcomeDescription = ["Congrats! Did you know that Lua is embedable Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, alias illo dolorem suscipit excepturi a velit vel blanditiis dicta voluptas!","Wow! looks like you're suited to assembly! you might be more of a hardware person Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, alias illo dolorem suscipit excepturi a velit vel blanditiis dicta voluptas!","Congrats! you got python! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, alias illo dolorem suscipit excepturi a velit vel blanditiis dicta voluptas!"];
 const questions = ["♫ you like pina coladas ♫", "♫ you enjoy getting caught in the rain ♫","♫ you're not into yoga ♫", "♫ you have half a brain ♫", "♫ You're not into healthfood ♫", "♫ you are into champagne ♫","♫ you prefer not to be stopped when you're having such a good time, or when you're havin' a ball ♫","♫ we are human ♫", "♫ we are dancer ♫","♫ my sign is vital ♫","♫ my hands are cold ♫"]
 
 
@@ -12,6 +12,7 @@ function updateQuestion() {
   counter += 1;
   $("#questionContent").text(questions[counter-1]);
   $("#default").prop("checked",true);
+  $("#questionNumber").text(counter);
 }
 function logAnswer() {
   test = parseInt(((counter-1)%3)+1);

@@ -14,11 +14,14 @@ body {
   display: grid;
   width: 80%;
   margin: 0 auto;
-  background-color:var(--offWhite)
+  background-color:var(--offWhite);
+  border-radius:.5em;
 }
 
 .titleCard > *{
   justify-self: center;
+  text-align:center;
+  padding:.25em 2em;
 }
 
 .purpleButt {
@@ -51,19 +54,25 @@ body {
   display:grid;
 }
 .bubbles form {
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: 3fr repeat(5,1fr) 3fr;
   align-items: center;
+  margin:2em auto;
+}
+.bubbles form span {
+  justify-self: center;
 }
 .styledRadioButton {
   height: 2em;
   width: 2em;
   border: .15em solid var(--softPurple);
-  margin-left:1em;
+  margin-left:.1em;
   border-radius: 50%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  justify-self: center;
 }
 
 .selected {
