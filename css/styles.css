@@ -100,7 +100,9 @@ body {
   margin-top:3em;
   justify-self: end;
 }
-
+.answerCard {
+  background-color: var(--offWhite);
+}
 .hidden {
   display: none;
 }
