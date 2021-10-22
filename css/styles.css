@@ -94,7 +94,7 @@ body {
 }
 .guideText {
   font-weight: bold;
-  color:var(--offBlack)
+  color:var(--offBlack);
 }
 #nextButton {
   margin-top:3em;
@@ -102,6 +102,12 @@ body {
 }
 .answerCard {
   background-color: var(--offWhite);
+  margin:0 auto;
+  display:grid;
+  justify-content:center;
+  width: 70%;
+  padding: 2em;
+  border-radius: 1em;
 }
 .hidden {
   display: none;
