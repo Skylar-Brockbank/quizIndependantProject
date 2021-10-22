@@ -10,9 +10,13 @@ const questions = ["♫ you like pina coladas ♫", "♫ you enjoy getting caugh
 
 function updateQuestion() {
   counter += 1;
-  $("#questionContent").text(questions[counter-1]);
-  $("#default").prop("checked",true);
-  $("#questionNumber").text(counter);
+  
+  let delayedAction = setTimeout(function() {
+    $("#questionContent").text(questions[counter-1]);
+    $("#default").prop("checked",true);
+    $("#questionNumber").text(counter);
+  }, 500);
+  $(".questionCard").delay(500).fadeIn(400);
 }
 function logAnswer() {
   test = parseInt(((counter-1)%3)+1);
@@ -36,19 +40,19 @@ function results(){
 
 $(document).ready(function(){
   $("#startButton").click(function(){
-    $(".titleCard").addClass("hidden");
-    $(".questionCard").removeClass("hidden")
+    $(".titleCard").fadeOut(400);
     updateQuestion();
   });
   $("#nextButton").click(function(){
     if (counter > (questions.length-1)){
-      $(".questionCard").addClass("hidden");
+      $(".questionCard").fadeOut(500);
       $("#answer").text(outcome[results()]);
       $("#description").text(outcomeDescription[results()]);
-      $(".answerCard").removeClass("hidden");
+      $(".answerCard").delay(600).fadeIn(600);
     }else{
-    logAnswer();
-    updateQuestion();
+      logAnswer();
+      $(".questionCard").fadeOut(400);
+      updateQuestion();
     }
   });
 });
