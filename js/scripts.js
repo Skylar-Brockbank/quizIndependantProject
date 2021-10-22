@@ -11,18 +11,18 @@ function updateQuestion() {
   
 }
 function logAnswer() {
-  let target = ((counter-1)%3)+1;
-  if (target===1){
-    optionA+=parseInt($("input:radio[name=userInput]:checked").val());
-  }else if (target===2){
-    optionB+=parseInt($("input:radio[name=userInput]:checked").val());
+  test = parseInt(((counter-1)%3)+1);
+  if (test==1){
+    optionA += parseInt($("input:radio[name=userInput]:checked").val());
+  }else if (test===2){
+    optionB += parseInt($("input:radio[name=userInput]:checked").val());
   }else{
-    optionC+=parseInt($("input:radio[name=userInput]:checked").val());
+    optionC += parseInt($("input:radio[name=userInput]:checked").val());
   }
-  console.log(target + " target");
-  console.log(target===1 + " 1 true");
-  console.log(target===2 + " 2 true");
-  console.log(target===3 + " 3 true");
+  console.log(target);
+  console.log(test == 1);
+  console.log(test===2);
+  console.log(test===3);
   console.log(optionA + " A");
   console.log(optionB + " B");
   console.log(optionC + " C");
