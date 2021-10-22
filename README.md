@@ -20,7 +20,7 @@ _This is a proof of concept quiz that I made for my second week independant proj
 
 ## Setup/Installation Requirements
 
-* _Click the green "Code" button and Download Zip _
+* _Click the green "Code" button and Download Zip_
 * _Extract the contents of the zip file to a folder on your machine_
 * _Run the Index.html file with your browser of choice (I recommend Chrome)_
 
