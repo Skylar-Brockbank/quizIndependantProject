@@ -10,7 +10,6 @@ const questions = ["♫ you like pina coladas ♫", "♫ you enjoy getting caugh
 
 function updateQuestion() {
   counter += 1;
-  
   let delayedAction = setTimeout(function() {
     $("#questionContent").text(questions[counter-1]);
     $("#default").prop("checked",true);
